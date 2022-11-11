@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  background: var(--light-grey);
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  width: 7.8rem;
+  height: 100vh;
+  padding-top: 2.6rem;
+
+  background-color: var(--green);
+  transition: 0.3s;
+}
+
+aside.expanded {
+  width: 30rem;
+  transition: 0.3s;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3.4rem;
+  padding-inline: 1.4rem;
+}
+
+aside button {
+  background: none;
+  border: none;
+}
+
+aside button img {
+  cursor: pointer;
+}
+
+aside button.search {
+  background: none;
+  border: none;
+
+  padding: 1.3rem;
+
+  background: #dce4e3;
+  border-radius: 1.2rem;
+  transition: 0.3s;
+}
+
+aside .log-out {
+  width: 100%;
+  padding: 1.8rem;
+  margin-inline: auto;
+
+  background: var(--light-green);
+}
+
+/* EXPANDED */
+aside .legend,
+aside input,
+aside .profile,
+aside .user {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+}
+
+aside.expanded .legend,
+aside.expanded input,
+aside.expanded .profile,
+aside.expanded .user {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+}
+
+aside.expanded ul {
+  padding-inline: 2.7rem;
+}
+
+aside.expanded ul li button {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+aside.expanded li:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.expanded img {
+  margin-left: 1.3rem;
+}
+
+aside.expanded button.search input {
+  background: none;
+  border: none;
+  outline: 0;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+aside.expanded .log-out {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding-block: 1.8rem;
+  gap: 4.7rem;
+}
+
+aside .profile {
+  display: flex;
+  gap: 0.9rem;
+}
+
+aside .profile .legend {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  margin: 0;
+}
+
+aside.expanded .log-out .profile span {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+aside.expanded .log-out .profile {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+aside .profile img {
+  height: 4.5rem;
+  border-radius: 1.2rem;
+}
+
+/* MAIN */
+
+main {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+
+  color: var(--text-color);
+  margin-top: 1.8rem;
+  margin-left: 2rem;
+}

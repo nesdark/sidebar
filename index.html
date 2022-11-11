@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideBar</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./sidebar.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <aside>
+        <ul>
+          <li>
+            <div class="legend">
+              <img src="images/logo.svg" alt="Logo vet" />
+            </div>
+            <button class="logo">
+              <img
+                src="./images/menu.svg"
+                alt="Menu"
+                onclick="SideBar.toggle()"
+              />
+            </button>
+          </li>
+          <li>
+            <button class="search">
+              <label for="search"
+                ><img src="./images/search.svg" alt="Pesquisar"
+              /></label>
+              <input type="text" placeholder="Buscar" id="search" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/grid.svg" alt="Menu" />
+              <div class="legend">Dashboard</div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/pet.svg" alt="Menu" />
+              <div class="legend">Pets</div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/user.svg" alt="Menu" />
+              <div class="legend">Clientes</div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/vet.svg" alt="Menu" />
+              <div class="legend">Vets</div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/settings.svg" alt="Menu" />
+              <div class="legend">Ajustes</div>
+            </button>
+          </li>
+        </ul>
+        <button class="log-out">
+          <div class="profile">
+            <img src="./images/photo.png" alt="Foto de mulher" class="user" />
+            <div class="legend">
+              <span>Eleanor</span>
+              Veterinária
+            </div>
+          </div>
+          <img src="./images/log-out.svg" alt="Sair" />
+        </button>
+      </aside>
+      <main>Dashboard</main>
+    </div>
+    <script src="./sidebar.js"></script>
+  </body>
+</html>
